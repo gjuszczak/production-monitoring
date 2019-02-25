@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using ProductionMonitoring.Manager.App.Services;
+using ProductionMonitoring.Admin.Services;
 
-namespace ProductionMonitoring.Manager.App
+namespace ProductionMonitoring.Admin
 {
     public class Startup
     {
