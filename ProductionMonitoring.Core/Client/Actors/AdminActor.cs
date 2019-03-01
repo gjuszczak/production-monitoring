@@ -2,7 +2,7 @@
 using ProductionMonitoring.Server;
 using System;
 
-namespace ProductionMonitoring.Admin
+namespace ProductionMonitoring.Client.Actors
 {
     public class AdminActor : ReceiveActor
     {

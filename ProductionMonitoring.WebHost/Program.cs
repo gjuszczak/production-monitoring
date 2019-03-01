@@ -22,7 +22,18 @@ namespace ProductionMonitoring.WebHost
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    var appSelector = args.FirstOrDefault()?.ToUpper();
+
+                    switch (appSelector)
+                    {
+                        case "MEASURE":
+                            webBuilder.UseStartup<MeasureStartup>();
+                            break;
+
+                        default:
+                            webBuilder.UseStartup<AdminStartup>();
+                            break;
+                    }
                 });
     }
 }

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductionMonitoring.Admin\ProductionMonitoring.Admin.csproj" />
+    <ProjectReference Include="..\ProductionMonitoring.Measure\ProductionMonitoring.Measure.csproj" />
   </ItemGroup>
 
 </Project>
