@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  pm-server:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  pm-measure:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"

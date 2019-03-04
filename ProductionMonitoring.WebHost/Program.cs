@@ -22,7 +22,7 @@ namespace ProductionMonitoring.WebHost
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    var appSelector = args.FirstOrDefault()?.ToUpper();
+                    var appSelector = Environment.GetEnvironmentVariable("APP")?.ToUpper();
 
                     switch (appSelector)
                     {

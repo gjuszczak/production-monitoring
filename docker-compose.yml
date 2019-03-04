@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  pm-server:
+    image: dev/productionmonitoring
+    build:
+      context: .
+      dockerfile: ProductionMonitoring.WebHost/Dockerfile
+
+  pm-measure:
+    image: dev/productionmonitoring
+    environment:
+      - APP=measure
+    build:
+      context: .
+      dockerfile: ProductionMonitoring.WebHost/Dockerfile
