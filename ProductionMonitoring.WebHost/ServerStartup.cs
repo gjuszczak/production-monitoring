@@ -9,13 +9,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ProductionMonitoring.WebHost
 {
-    public class AdminStartup
+    public class ServerStartup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorComponents<Admin.Startup>();
+            services.AddRazorComponents<Server.Startup>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,7 +27,7 @@ namespace ProductionMonitoring.WebHost
             }
 
             app.UseStaticFiles();
-            app.UseRazorComponents<Admin.Startup>();
+            app.UseRazorComponents<Server.Startup>();
         }
     }
 }

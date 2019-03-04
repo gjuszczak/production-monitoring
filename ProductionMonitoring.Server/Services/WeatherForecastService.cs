@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProductionMonitoring.Admin.Services
+namespace ProductionMonitoring.Server.Services
 {
     public class WeatherForecastService
     {

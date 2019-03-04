@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring", "ProductionMonitoring.Core\ProductionMonitoring.csproj", "{3C8D10FF-71F5-4402-9239-0F33B5E66E51}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring.Server", "ProductionMonitoring.Server\ProductionMonitoring.Server.csproj", "{AB3179C9-F2B1-479A-810F-C68CF2BEBD9E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring.Admin", "ProductionMonitoring.Admin\ProductionMonitoring.Admin.csproj", "{1697013A-6663-45A8-9DB1-CB5781FE61DA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring.Measure", "ProductionMonitoring.Measure\ProductionMonitoring.Measure.csproj", "{378A1283-49B8-4E23-9FA3-831996651F3C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring.WebHost", "ProductionMonitoring.WebHost\ProductionMonitoring.WebHost.csproj", "{9B2A806E-789F-4919-B208-09FA88895393}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring.Server", "ProductionMonitoring.Server\ProductionMonitoring.Server.csproj", "{EE31A74E-300B-458C-9012-809AAADFCE0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductionMonitoring", "ProductionMonitoring\ProductionMonitoring.csproj", "{C0E5594F-0532-44B7-AA1C-38CCBEB00EE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,18 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C8D10FF-71F5-4402-9239-0F33B5E66E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C8D10FF-71F5-4402-9239-0F33B5E66E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C8D10FF-71F5-4402-9239-0F33B5E66E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C8D10FF-71F5-4402-9239-0F33B5E66E51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB3179C9-F2B1-479A-810F-C68CF2BEBD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB3179C9-F2B1-479A-810F-C68CF2BEBD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB3179C9-F2B1-479A-810F-C68CF2BEBD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB3179C9-F2B1-479A-810F-C68CF2BEBD9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1697013A-6663-45A8-9DB1-CB5781FE61DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1697013A-6663-45A8-9DB1-CB5781FE61DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1697013A-6663-45A8-9DB1-CB5781FE61DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1697013A-6663-45A8-9DB1-CB5781FE61DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{378A1283-49B8-4E23-9FA3-831996651F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{378A1283-49B8-4E23-9FA3-831996651F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{378A1283-49B8-4E23-9FA3-831996651F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +25,14 @@ Global
 		{9B2A806E-789F-4919-B208-09FA88895393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B2A806E-789F-4919-B208-09FA88895393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B2A806E-789F-4919-B208-09FA88895393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE31A74E-300B-458C-9012-809AAADFCE0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE31A74E-300B-458C-9012-809AAADFCE0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE31A74E-300B-458C-9012-809AAADFCE0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE31A74E-300B-458C-9012-809AAADFCE0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E5594F-0532-44B7-AA1C-38CCBEB00EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E5594F-0532-44B7-AA1C-38CCBEB00EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E5594F-0532-44B7-AA1C-38CCBEB00EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E5594F-0532-44B7-AA1C-38CCBEB00EE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

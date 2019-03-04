@@ -31,7 +31,7 @@ namespace ProductionMonitoring.WebHost
                             break;
 
                         default:
-                            webBuilder.UseStartup<AdminStartup>();
+                            webBuilder.UseStartup<ServerStartup>();
                             break;
                     }
                 });

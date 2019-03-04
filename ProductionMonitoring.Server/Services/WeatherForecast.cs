@@ -1,6 +1,6 @@
 using System;
 
-namespace ProductionMonitoring.Admin.Services
+namespace ProductionMonitoring.Server.Services
 {
     public class WeatherForecast
     {
