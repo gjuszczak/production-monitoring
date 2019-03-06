@@ -1,14 +1,24 @@
 version: '3.4'
 
 services:
-  pm-server:
+  grafana:
+    image: grafana/grafana 
+    container_name: grafana
+    ports:
+     - 8080:3000
+    volumes:
+      - D:\dockervolumes\grafana:/var/lib/grafana
+
+  pmserver:
     image: dev/productionmonitoring
+    container_name: pmserver
     build:
       context: .
       dockerfile: ProductionMonitoring.WebHost/Dockerfile
 
-  pm-measure:
+  pmmeasure:
     image: dev/productionmonitoring
+    container_name: pmmeasure
     environment:
       - APP=measure
     build:
