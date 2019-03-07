@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using ProductionMonitoring.Server.Services;
 
 namespace ProductionMonitoring.Server
 {
@@ -8,8 +7,7 @@ namespace ProductionMonitoring.Server
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            // Example of a data service
-            services.AddSingleton<WeatherForecastService>();
+            services.RegisterPmServer();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

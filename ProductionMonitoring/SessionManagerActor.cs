@@ -1,7 +1,7 @@
 ﻿using Akka.Actor;
 using System;
 
-namespace ProductionMonitoring.Server
+namespace ProductionMonitoring
 {
     public class SessionManagerActor : ReceiveActor
     {

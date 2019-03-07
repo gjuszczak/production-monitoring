@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProductionMonitoring.Client.Identification
+namespace ProductionMonitoring
 {
     public class WorkstationDetails
     {

@@ -1,8 +1,7 @@
 ﻿using Akka.Actor;
-using ProductionMonitoring.Server;
 using System;
 
-namespace ProductionMonitoring.Client.Actors
+namespace ProductionMonitoring
 {
     public class AdminActor : ReceiveActor
     {
