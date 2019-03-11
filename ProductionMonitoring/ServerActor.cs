@@ -7,18 +7,16 @@ namespace ProductionMonitoring
 
     public class ServerActor : ReceiveActor
     {
-        public ServerActor()
+        private readonly GrafanaApi grafana;
+
+        public ServerActor(GrafanaApi grafana)
         {
+            this.grafana = grafana;
+
             Receive<LoginCommand>(cmd =>
             {
-                Console.WriteLine("Login");
-                Sender.Tell(new LoginCommandResult("Success!"));
+                grafana.Login(cmd).PipeTo(Sender);
             });
-        }
-
-        public static Props Props()
-        {
-            return Akka.Actor.Props.Create(() => new ServerActor());
         }
     }
 

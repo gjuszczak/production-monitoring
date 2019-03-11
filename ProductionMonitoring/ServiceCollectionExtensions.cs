@@ -1,5 +1,6 @@
 ﻿using Akka.Actor;
 using Akka.Configuration;
+using Akka.DI.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -9,16 +10,26 @@ namespace ProductionMonitoring
     {
         public static void RegisterPmServer(this IServiceCollection services)
         {
-            services.AddSingleton(provider => ActorSystem.Create("PmServer", provider.GetServerAkkaConfig()));
-
+            services.AddSingleton(provider =>
+            {
+                var system = ActorSystem.Create("PmServer", provider.GetServerAkkaConfig());
+                var di = new DependencyResolver(provider, system);
+                system.AddDependencyResolver(di);
+                return system;
+            });
             services.AddSingleton<ServerActorProvider>(provider =>
             {
-                var actorSystem = provider.GetService<ActorSystem>();
-                var serverActor = actorSystem.ActorOf(ServerActor.Props(), "server");
+                var system = provider.GetService<ActorSystem>();
+                var serverActor = system.ActorOf(system.DI().Props<ServerActor>(), "server");
                 return () => serverActor;
             });
 
+            // register services
             services.AddSingleton<PmApi>();
+            services.AddSingleton<GrafanaApi>();
+
+            // register actors
+            services.AddTransient<ServerActor>();
         }
 
         private static Config GetServerAkkaConfig(this IServiceProvider provider)
