@@ -9,18 +9,20 @@ services:
     volumes:
       - D:\dockervolumes\grafana:/var/lib/grafana
 
-  pmserver:
-    image: dev/productionmonitoring
-    container_name: pmserver
+  pmadmin:
+    image: dev/pmadmin
+    container_name: pmadmin
+    ports:
+      - 5001:80
     build:
       context: .
-      dockerfile: ProductionMonitoring.WebHost/Dockerfile
+      dockerfile: ProductionMonitoring.Admin/Dockerfile
 
-  pmmeasure:
-    image: dev/productionmonitoring
-    container_name: pmmeasure
-    environment:
-      - APP=measure
+  pmmeasurer:
+    image: dev/pmmeasurer
+    container_name: pmmeasurer
+    ports:
+      - 5002:80
     build:
       context: .
-      dockerfile: ProductionMonitoring.WebHost/Dockerfile
+      dockerfile: ProductionMonitoring.Measurer/Dockerfile

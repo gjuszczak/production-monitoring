@@ -1,14 +1,10 @@
 version: '3.4'
 
 services:
-  pmserver:
+  pmadmin:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5001:80"
 
-  pmmeasure:
+  pmmeasurer:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5002:80"
