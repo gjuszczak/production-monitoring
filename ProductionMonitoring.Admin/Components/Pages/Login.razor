@@ -1,6 +1,7 @@
 ﻿@page "/login"
 @layout EmptyLayout
 @inject PmApi Api
+@inject IUriHelper  UriHelper
 
 <div class="d-flex w-100 vh-100 justify-content-center align-items-center">
     <div class="card w-100 m-3 shadow-sm" style="max-width:30em;">
@@ -28,6 +29,7 @@
     async Task LoginSubmit()
     {
         var result = await Api.Login(username, password);
-
+        if (result.Success)
+            UriHelper.NavigateTo("/");
     }
 }

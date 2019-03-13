@@ -4,7 +4,7 @@ using Akka.DI.Core;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace ProductionMonitoring
+namespace ProductionMonitoring.Extensions
 {
     public static class ServiceCollectionExtensions
     {

@@ -35,11 +35,11 @@ namespace ProductionMonitoring
 
     public sealed class LoginCommandResult
     {
-        public LoginCommandResult(string status)
+        public LoginCommandResult(bool success)
         {
-            Status = status;
+            Success = success;
         }
 
-        public string Status { get; }
+        public bool Success { get; }
     }
 }

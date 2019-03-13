@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProductionMonitoring.Admin.Components;
+using ProductionMonitoring.Extensions;
 
 namespace ProductionMonitoring.Admin
 {
