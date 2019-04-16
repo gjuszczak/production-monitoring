@@ -9,12 +9,3 @@ services:
     build:
       context: .
       dockerfile: ProductionMonitoring.Admin/Dockerfile
-
-  pmmeasurer:
-    image: dev/pmmeasurer
-    container_name: pmmeasurer
-    ports:
-      - 5002:80
-    build:
-      context: .
-      dockerfile: ProductionMonitoring.Measurer/Dockerfile

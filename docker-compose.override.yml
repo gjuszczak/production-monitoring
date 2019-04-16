@@ -4,7 +4,3 @@ services:
   pmadmin:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-
-  pmmeasurer:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
