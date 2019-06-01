@@ -21,9 +21,14 @@ namespace ProductionMonitoring
                     var response = await client
                         .BaseUri(baseUrl)
                         .BasicAuth(loginCommand.Username, loginCommand.Password)
-                        .GetAsync("/api/orgs")
+                        .GetAsync("/api/user");
+
+                    var content = await response
                         .ReadJsonContentAsync<JContainer>();
-                                        
+
+                    var userName = content.SelectToken("name").Value<string>();
+                    var sessionId = response.Content.Headers;
+
                     return new LoginCommandResult(true);
                 }
             }
