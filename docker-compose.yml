@@ -1,14 +1,6 @@
 version: '3.4'
 
 services:
-  grafana:
-    image: grafana/grafana:6.0.0
-    container_name: grafana
-    ports:
-     - 3000:3000
-    volumes:
-      - D:\dockervolumes\grafana:/var/lib/grafana
-
   pmadmin:
     image: dev/pmadmin
     container_name: pmadmin
@@ -17,12 +9,3 @@ services:
     build:
       context: .
       dockerfile: ProductionMonitoring.Admin/Dockerfile
-
-  pmmeasurer:
-    image: dev/pmmeasurer
-    container_name: pmmeasurer
-    ports:
-      - 5002:80
-    build:
-      context: .
-      dockerfile: ProductionMonitoring.Measurer/Dockerfile
